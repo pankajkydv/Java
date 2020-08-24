@@ -28,21 +28,20 @@ public class BST {
 		return nn;
 
 	}
-	
+
 	public boolean find(int item) {
-		 return this.find(this.root, item);
+		return this.find(this.root, item);
 	}
-	private boolean find(Node node,int item) {
-		if(node==null) {
+
+	private boolean find(Node node, int item) {
+		if (node == null) {
 			return false;
 		}
-		if(item<node.data) {
-			return find(node.left,item);
-		}
-		else if(item>node.data){
-			return find(node.right,item);
-		}
-		else {
+		if (item < node.data) {
+			return find(node.left, item);
+		} else if (item > node.data) {
+			return find(node.right, item);
+		} else {
 			return true;
 		}
 	}

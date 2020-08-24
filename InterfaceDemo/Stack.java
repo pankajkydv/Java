@@ -10,7 +10,7 @@ public class Stack implements DynamicStackI {
 	@Override
 	public void pop(int item) {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
@@ -22,7 +22,7 @@ public class Stack implements DynamicStackI {
 	@Override
 	public void display() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override

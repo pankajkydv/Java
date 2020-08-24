@@ -56,6 +56,7 @@ public class BinaryTree {
 		}
 		return node;
 	}
+
 //	Display Nodes of tree
 	public void display() {
 		this.display(this.root);
@@ -83,7 +84,7 @@ public class BinaryTree {
 		}
 	}
 //	2nd method to display
-	
+
 //	private void display(Node node) {
 //		if(node==null) {
 //			return;
@@ -114,68 +115,76 @@ public class BinaryTree {
 	public int height() {
 		return this.height(this.root);
 	}
+
 	private int height(Node node) {
-		if(node==null) {
+		if (node == null) {
 			return -1;
 		}
-		int lheight=this.height(node.left);
-		int rheight=this.height(node.right);
-		int height=Math.max(lheight, rheight)+1;
+		int lheight = this.height(node.left);
+		int rheight = this.height(node.right);
+		int height = Math.max(lheight, rheight) + 1;
 		return height;
 	}
+
 //	preOrder of tree
 	public void preOrder() {
 		this.preOrder(this.root);
 		System.out.println("END");
 	}
+
 	private void preOrder(Node node) {
-		if(node==null) {
+		if (node == null) {
 			return;
 		}
-		System.out.print(node.data+",");
+		System.out.print(node.data + ",");
 		preOrder(node.left);
 		preOrder(node.right);
 	}
+
 //	postOrder of tree
 	public void postOrder() {
 		this.postOrder(this.root);
 		System.out.println("END");
 	}
+
 	private void postOrder(Node node) {
-		if(node==null) {
+		if (node == null) {
 			return;
 		}
 		postOrder(node.left);
 		postOrder(node.right);
-		System.out.print(node.data+",");
+		System.out.print(node.data + ",");
 	}
+
 //	inOrder of tree
 	public void inOrder() {
 		this.inOrder(this.root);
 		System.out.println("END");
 	}
+
 	private void inOrder(Node node) {
-		if(node==null) {
+		if (node == null) {
 			return;
 		}
 		inOrder(node.left);
-		System.out.print(node.data+",");
+		System.out.print(node.data + ",");
 		inOrder(node.right);
-		
+
 	}
+
 //	levelOrder of tree
 	public void levelOrder() {
-		LinkedList<Node>queue=new LinkedList<>();
+		LinkedList<Node> queue = new LinkedList<>();
 		queue.add(this.root);
-		while(!queue.isEmpty()) {
-        Node rv=queue.removeFirst();
-        System.out.print(rv.data+",");
-        if(rv.left!=null) {
-      queue.addLast(rv.left);
-        }
-        if(rv.right!=null) {
-        	queue.addLast(rv.right);
-        }
+		while (!queue.isEmpty()) {
+			Node rv = queue.removeFirst();
+			System.out.print(rv.data + ",");
+			if (rv.left != null) {
+				queue.addLast(rv.left);
+			}
+			if (rv.right != null) {
+				queue.addLast(rv.right);
+			}
 		}
 		System.out.println("END");
 	}
