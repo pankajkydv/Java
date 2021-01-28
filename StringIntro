@@ -2,14 +2,22 @@
 public class StringPoolExperiment {
   
     public static void main(String[] args) {
-        String s1 = "Rachel";
-        String s2 = "Rachel";
-        String s3 = new String("Rachel");//creates two objects, one in string constant pool and other in non-pool(heap). and one reference variable.The variable s will refer to the object in a heap (non-pool).
-        //if you are willing to add this string to the string literal pool, Java provides you with a method called, intern() method; you can call native intern() method like this:
-        String s4 = new String("Rachel").intern();
+        String s1 = "Welcome";
+        String s2 = "Welcome";//It doesn't create a new instance  
+        String s3 = new String("Welcome");//creates two objects, one in string constant pool and other in non-pool(heap)and one reference variable.The variable s will refer to the object in a heap (non-pool).
+        String s4 = s3.intern();//returns string from pool, now it will be same as s2 and s1
   
-        System.out.println(s1 == s2); // true
-        System.out.println(s1 == s3); // false
-        System.out.println(s1 == s4); // true
+        System.out.println(s1 == s2); // true (because both refer to same instance)  
+        System.out.println(s1 == s3); // false because reference variables are pointing to different instance  
+        System.out.println(s1 == s4); // true  because reference variables are pointing to same instance 
+        
+        //Immutable String in Java
+        String s="Sachin";  
+        s.concat(" Tendulkar");//concat() method appends the string at the end  
+        System.out.println(s);//will print Sachin because strings are immutable objects.s reference variable still refers to "Sachin" not to "Sachin Tendulkar".
+   
+   //if we explicitely assign it to the reference variable, it will refer to "Sachin Tendulkar"
+        s=s.concat(" Tendulkar");  
+        System.out.println(s);  
     }
 }
