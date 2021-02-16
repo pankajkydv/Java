@@ -18,6 +18,6 @@ public class StringPoolExperiment {
    
    //if we explicitely assign it to the reference variable, it will refer to "Sachin Tendulkar"
         s=s.concat(" Tendulkar");  
-        System.out.println(s);  
+        System.out.println(s);  //Sachin Tendulakar//
     }
 }
