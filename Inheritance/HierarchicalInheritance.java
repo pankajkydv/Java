@@ -23,8 +23,8 @@ public class HierarchicalInheritance {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BabyDog b = new BabyDog();
-		b.weep();
-		b.eat();
+		b.weep();// weeping
+		b.eat(); // eating
 //		b.bark(); //wrong call//
 
 	}
