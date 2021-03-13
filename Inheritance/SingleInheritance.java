@@ -18,8 +18,8 @@ public class SingleInheritance {
 		// TODO Auto-generated method stub
 //creating object
 		Dog c = new Dog();
-		c.bark();
-		c.eat();
+		c.bark();//barking
+		c.eat();//eating
 	}
 
 }
