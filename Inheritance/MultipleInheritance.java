@@ -15,8 +15,8 @@ public class MultipleInheritance {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		A7 obj = new A7();  
-		obj.print();  
-		obj.show();  
+		obj.print(); //Hello
+		obj.show();  //Welcome
 	}
 
 }
